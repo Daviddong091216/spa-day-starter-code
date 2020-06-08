@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Customer Signup</h1>
-    <form method="post" th:action="@{/user/user}">
+    <form method="post" >
         <lable>UserName
             <input type="text" name="username" th:value="${username}">
         </lable>
@@ -19,11 +19,11 @@
         <lable>Verify Password
             <input type="password" name="verify">
         </lable>
-    </form>
+
 
     <p th:text="${error}"></p>
 
     <input type="submit" value="Submit">
-
+    </form>
 </body>
 </html>

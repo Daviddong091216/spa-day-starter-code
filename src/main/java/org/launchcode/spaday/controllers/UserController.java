@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("user")
 public class UserController {
 
-    @GetMapping("/add")
+    @GetMapping
     public String displayAddUserForm() {
         return "user/add";
     }
 
-    @PostMapping("/user")
+    @PostMapping
     public String processAddUserForm(Model model,
                                      @ModelAttribute User user,
                                      String verify) {
@@ -28,7 +28,7 @@ public class UserController {
         } else {
             model.addAttribute("username", user.getUsername());
             model.addAttribute("email", user.getEmail());
-            model.addAttribute("error", "Passwords dont match");
+            model.addAttribute("error", "Passwords don't match");
             return "user/add";
         }
     }
