@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title>David Dong</title>
+</head>
+<body>
+    <h1>I love you</h1>
+    <p th:text = "'Welcome ' + ${user.username} + '!'"></p>
+    <p><a th:href="@{/}">
+        Select your spa services here
+    </a></p>
+
+</body>
+</html>
